@@ -1,0 +1,117 @@
+generator client {
+  provider               = "prisma-client"
+  output                 = "../src/generated/prisma"
+  moduleFormat           = "esm"
+  generatedFileExtension = "ts"
+  importFileExtension    = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum InvestorProfile {
+  CONSERVATIVE
+  MODERATE
+  AGGRESSIVE
+}
+
+enum AssetType {
+  STOCK
+  FII
+  ETF
+  FIXED_INCOME
+  CRYPTO
+  FUND
+  OTHER
+}
+
+enum MovementType {
+  BUY
+  SELL
+}
+
+model User {
+  id           String   @id @default(uuid()) @db.Uuid
+  email        String   @unique
+  passwordHash String
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  profile    Profile?
+  portfolios Portfolio[]
+
+  @@map("users")
+}
+
+model Profile {
+  id              String           @id @default(uuid()) @db.Uuid
+  userId          String           @unique @db.Uuid
+  name            String
+  birthDate       DateTime?
+  defaultCurrency String           @default("BRL")
+  investorProfile InvestorProfile?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("profiles")
+}
+
+model Portfolio {
+  id          String   @id @default(uuid()) @db.Uuid
+  userId      String   @db.Uuid
+  name        String
+  description String?
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  assets    Asset[]
+  movements Movement[]
+
+  @@index([userId])
+  @@map("portfolios")
+}
+
+model Asset {
+  id           String    @id @default(uuid()) @db.Uuid
+  portfolioId  String    @db.Uuid
+  name         String
+  symbol       String?
+  type         AssetType
+  quantity     Decimal   @db.Decimal(18, 8)
+  averagePrice Decimal   @db.Decimal(18, 2)
+  currentPrice Decimal?  @db.Decimal(18, 2)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  portfolio  Portfolio  @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+  movements  Movement[]
+
+  @@index([portfolioId])
+  @@index([type])
+  @@map("assets")
+}
+
+model Movement {
+  id            String       @id @default(uuid()) @db.Uuid
+  portfolioId   String       @db.Uuid
+  assetId       String       @db.Uuid
+  type          MovementType
+  quantity      Decimal      @db.Decimal(18, 8)
+  price         Decimal      @db.Decimal(18, 2)
+  operationDate DateTime
+  createdAt     DateTime     @default(now())
+
+  portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+  asset     Asset     @relation(fields: [assetId], references: [id], onDelete: Cascade)
+
+  @@index([portfolioId])
+  @@index([assetId])
+  @@index([operationDate])
+  @@map("movements")
+}
