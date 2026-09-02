@@ -22,21 +22,11 @@ type Portfolio = {
   updatedAt: string;
 };
 
-type Asset = {
-  id: string;
-  portfolioId: string;
-  quantity: string | number;
-  averagePrice: string | number;
-  currentPrice: string | number | null;
-};
-
-
 export default function CarteirasPage() {
   const router = useRouter();
 
   const [portfolios, setPortfolios] =
     useState<Portfolio[]>([]);
-  const [assets, setAssets] = useState<Asset[]>([]);
 
   const [isLoading, setIsLoading] =
     useState(true);
@@ -67,13 +57,12 @@ export default function CarteirasPage() {
 
   async function loadPortfolios() {
     try {
-      const [portfoliosResponse, assetsResponse] = await Promise.all([
-        authenticatedApiRequest<Portfolio[]>('/portfolios'),
-        authenticatedApiRequest<Asset[]>('/assets'),
-      ]);
+      const response =
+        await authenticatedApiRequest<Portfolio[]>(
+          '/portfolios',
+        );
 
-      setPortfolios(portfoliosResponse);
-      setAssets(assetsResponse);
+      setPortfolios(response);
     } catch (err) {
       const message =
         err instanceof Error
@@ -242,23 +231,6 @@ export default function CarteirasPage() {
     }
   }
 
-
-  const totalPatrimony = assets.reduce((total, asset) => {
-    const quantity = Number(asset.quantity);
-
-    const price =
-      asset.currentPrice === null
-        ? Number(asset.averagePrice)
-        : Number(asset.currentPrice);
-
-    return total + quantity * price;
-  }, 0);
-
-  const formattedPatrimony = totalPatrimony.toLocaleString('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  });
-
   return (
     <main className="dashboard-shell">
       <AppSidebar />
@@ -324,12 +296,12 @@ export default function CarteirasPage() {
             </span>
 
             <strong className="mt-4 block text-2xl text-[#1D4ED8]">
-                {formattedPatrimony}
-              </strong>
+              R$ 0,00
+            </strong>
 
-              <small className="mt-1 block text-[#98a2b3]">
-                Valor atual dos ativos nas carteiras
-              </small>
+            <small className="mt-1 block text-[#98a2b3]">
+              Ativos serão adicionados no próximo módulo
+            </small>
           </article>
         </section>
 
