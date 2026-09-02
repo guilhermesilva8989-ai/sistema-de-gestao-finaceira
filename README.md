@@ -257,54 +257,6 @@ Paleta principal:
 
 ---
 
-## 📸 Screenshots
-
-> As imagens abaixo podem ser adicionadas ao repositório na pasta `docs/screenshots`.
-
-### Dashboard
-
-```text
-docs/screenshots/dashboard.png
-```
-
-### Carteiras
-
-```text
-docs/screenshots/carteiras.png
-```
-
-### Ativos
-
-```text
-docs/screenshots/ativos.png
-```
-
-### Movimentações
-
-```text
-docs/screenshots/movimentacoes.png
-```
-
-### Simulador
-
-```text
-docs/screenshots/simulador.png
-```
-
-### Metas
-
-```text
-docs/screenshots/metas.png
-```
-
-Depois que os arquivos forem adicionados, esta seção poderá utilizar:
-
-```markdown
-![Dashboard](docs/screenshots/dashboard.png)
-```
-
----
-
 ## 🛠️ Stack utilizada
 
 ### Frontend
