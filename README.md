@@ -561,13 +561,13 @@ Instale:
 ## 1. Clonar o projeto
 
 ```bash
-git clone https://github.com/guilhermesilva8989-ai/sistema-de-gestao-financeira.git
+git clone https://github.com/guilhermesilva8989-ai/sistema-de-gestao-finaceira.git
 ```
 
 Entre na pasta:
 
 ```bash
-cd sistema-de-gestao-financeira
+cd sistema-de-gestao-finaceira
 ```
 
 ---
@@ -905,7 +905,7 @@ Diferentemente de um projeto puramente visual, a aplicação possui persistênci
 ✅ Build do backend
 ✅ Build do frontend
 
-🔄 Screenshots
+✅ Screenshots
 🔄 Deploy
 ```
 
