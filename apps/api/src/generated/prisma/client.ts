@@ -66,3 +66,8 @@ export type Asset = Prisma.AssetModel
  * 
  */
 export type Movement = Prisma.MovementModel
+/**
+ * Model Goal
+ * 
+ */
+export type Goal = Prisma.GoalModel

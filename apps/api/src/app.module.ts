@@ -4,6 +4,7 @@ import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { AssetsModule } from './assets/assets.module.js';
 import { AuthModule } from './auth/auth.module.js';
+import { GoalsModule } from './goals/goals.module.js';
 import { HealthModule } from './health/health.module.js';
 import { MovementsModule } from './movements/movements.module.js';
 import { PortfoliosModule } from './portfolios/portfolios.module.js';
@@ -23,6 +24,7 @@ import { UsersModule } from './users/users.module.js';
     PortfoliosModule,
     AssetsModule,
     MovementsModule,
+    GoalsModule,
   ],
 
   controllers: [

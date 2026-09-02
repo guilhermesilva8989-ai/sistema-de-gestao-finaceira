@@ -254,7 +254,7 @@ export default function CarteirasPage() {
 
           <button
             onClick={openCreate}
-            className="rounded-xl bg-[#0b6b57] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#074d40]"
+            className="rounded-xl bg-[#1D4ED8] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#1E40AF]"
           >
             + Nova carteira
           </button>
@@ -295,7 +295,7 @@ export default function CarteirasPage() {
               Patrimônio
             </span>
 
-            <strong className="mt-4 block text-2xl text-[#0b6b57]">
+            <strong className="mt-4 block text-2xl text-[#1D4ED8]">
               R$ 0,00
             </strong>
 
@@ -339,7 +339,7 @@ export default function CarteirasPage() {
                     className="flex flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between"
                   >
                     <div className="flex min-w-0 items-center gap-4">
-                      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#dff4ee] font-bold text-[#0b6b57]">
+                      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#DBEAFE] font-bold text-[#1D4ED8]">
                         C
                       </div>
 
@@ -350,7 +350,7 @@ export default function CarteirasPage() {
                           </strong>
 
                           {portfolio.isDefault && (
-                            <span className="rounded-full bg-[#dff4ee] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-[#0b6b57]">
+                            <span className="rounded-full bg-[#DBEAFE] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-[#1D4ED8]">
                               Principal
                             </span>
                           )}
@@ -449,7 +449,7 @@ export default function CarteirasPage() {
                     )
                   }
                   placeholder="Ex.: Aposentadoria"
-                  className="mt-2 h-12 w-full rounded-xl border border-[#d0d5dd] px-4 font-normal outline-none transition focus:border-[#0b6b57] focus:ring-4 focus:ring-[#0b6b57]/10"
+                  className="mt-2 h-12 w-full rounded-xl border border-[#d0d5dd] px-4 font-normal outline-none transition focus:border-[#1D4ED8] focus:ring-4 focus:ring-[#1D4ED8]/10"
                 />
               </label>
 
@@ -465,7 +465,7 @@ export default function CarteirasPage() {
                     )
                   }
                   placeholder="Ex.: Investimentos de longo prazo para aposentadoria."
-                  className="mt-2 min-h-28 w-full resize-none rounded-xl border border-[#d0d5dd] p-4 font-normal outline-none transition focus:border-[#0b6b57] focus:ring-4 focus:ring-[#0b6b57]/10"
+                  className="mt-2 min-h-28 w-full resize-none rounded-xl border border-[#d0d5dd] p-4 font-normal outline-none transition focus:border-[#1D4ED8] focus:ring-4 focus:ring-[#1D4ED8]/10"
                 />
               </label>
 
@@ -481,7 +481,7 @@ export default function CarteirasPage() {
                 <button
                   type="submit"
                   disabled={isSaving}
-                  className="rounded-xl bg-[#0b6b57] px-5 py-3 text-sm font-bold text-white hover:bg-[#074d40] disabled:opacity-60"
+                  className="rounded-xl bg-[#1D4ED8] px-5 py-3 text-sm font-bold text-white hover:bg-[#1E40AF] disabled:opacity-60"
                 >
                   {isSaving
                     ? 'Salvando...'

@@ -194,7 +194,7 @@ export default function SimuladorPage() {
                         event.target.value,
                       )
                     }
-                    className="h-12 w-full rounded-xl border border-[#d0d5dd] pl-11 pr-4 font-normal outline-none focus:border-[#0b6b57]"
+                    className="h-12 w-full rounded-xl border border-[#d0d5dd] pl-11 pr-4 font-normal outline-none focus:border-[#1D4ED8]"
                   />
                 </div>
               </label>
@@ -220,7 +220,7 @@ export default function SimuladorPage() {
                         event.target.value,
                       )
                     }
-                    className="h-12 w-full rounded-xl border border-[#d0d5dd] pl-11 pr-4 font-normal outline-none focus:border-[#0b6b57]"
+                    className="h-12 w-full rounded-xl border border-[#d0d5dd] pl-11 pr-4 font-normal outline-none focus:border-[#1D4ED8]"
                   />
                 </div>
               </label>
@@ -240,7 +240,7 @@ export default function SimuladorPage() {
                         event.target.value,
                       )
                     }
-                    className="h-12 w-full rounded-xl border border-[#d0d5dd] px-4 pr-10 font-normal outline-none focus:border-[#0b6b57]"
+                    className="h-12 w-full rounded-xl border border-[#d0d5dd] px-4 pr-10 font-normal outline-none focus:border-[#1D4ED8]"
                   />
 
                   <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-[#667085]">
@@ -265,7 +265,7 @@ export default function SimuladorPage() {
                         event.target.value,
                       )
                     }
-                    className="h-12 w-full rounded-xl border border-[#d0d5dd] px-4 pr-16 font-normal outline-none focus:border-[#0b6b57]"
+                    className="h-12 w-full rounded-xl border border-[#d0d5dd] px-4 pr-16 font-normal outline-none focus:border-[#1D4ED8]"
                   />
 
                   <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-[#667085]">
@@ -276,7 +276,7 @@ export default function SimuladorPage() {
 
               <button
                 type="submit"
-                className="mt-2 rounded-xl bg-[#0b6b57] px-5 py-3 text-sm font-bold text-white hover:bg-[#074d40]"
+                className="mt-2 rounded-xl bg-[#1D4ED8] px-5 py-3 text-sm font-bold text-white hover:bg-[#1E40AF]"
               >
                 Simular investimento
               </button>
@@ -314,7 +314,7 @@ export default function SimuladorPage() {
                   Patrimônio projetado
                 </span>
 
-                <strong className="mt-4 block text-xl text-[#0b6b57]">
+                <strong className="mt-4 block text-xl text-[#1D4ED8]">
                   {currency(
                     result.finalBalance,
                   )}
@@ -330,7 +330,7 @@ export default function SimuladorPage() {
                   Rendimentos
                 </span>
 
-                <strong className="mt-4 block text-xl text-[#0b6b57]">
+                <strong className="mt-4 block text-xl text-[#1D4ED8]">
                   {currency(
                     result.totalInterest,
                   )}
@@ -346,7 +346,7 @@ export default function SimuladorPage() {
                   Retorno
                 </span>
 
-                <strong className="mt-4 block text-xl text-[#0b6b57]">
+                <strong className="mt-4 block text-xl text-[#1D4ED8]">
                   {result.profitability.toFixed(
                     2,
                   )}
@@ -372,7 +372,7 @@ export default function SimuladorPage() {
                   </p>
                 </div>
 
-                <span className="rounded-full bg-[#e7f6f1] px-4 py-2 text-xs font-bold text-[#0b6b57]">
+                <span className="rounded-full bg-[#DBEAFE] px-4 py-2 text-xs font-bold text-[#1D4ED8]">
                   {result.months} meses
                 </span>
               </div>
@@ -434,7 +434,7 @@ export default function SimuladorPage() {
                 </div>
               </div>
 
-              <div className="mt-6 rounded-xl border border-[#d1e9e2] bg-[#f2fbf8] p-5">
+              <div className="mt-6 rounded-xl border border-[#BFDBFE] bg-[#EFF6FF] p-5">
                 <p className="text-sm leading-6 text-[#475467]">
                   Esta simulação é apenas uma
                   projeção matemática. A

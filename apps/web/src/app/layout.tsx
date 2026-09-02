@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Finora | Gestão de Investimentos',
+  title: 'Financeira Rakisan | Gestão de Investimentos',
   description:
     'Plataforma para gestão e simulação de investimentos.',
 };

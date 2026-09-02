@@ -361,7 +361,7 @@ export default function AtivosPage() {
             disabled={
               portfolios.length === 0
             }
-            className="rounded-xl bg-[#0b6b57] px-5 py-3 text-sm font-bold text-white hover:bg-[#074d40] disabled:opacity-50"
+            className="rounded-xl bg-[#1D4ED8] px-5 py-3 text-sm font-bold text-white hover:bg-[#1E40AF] disabled:opacity-50"
           >
             + Novo ativo
           </button>
@@ -401,7 +401,7 @@ export default function AtivosPage() {
               Valor atual
             </span>
 
-            <strong className="mt-4 block text-xl text-[#0b6b57]">
+            <strong className="mt-4 block text-xl text-[#1D4ED8]">
               {currency(
                 summary.current,
               )}
@@ -416,7 +416,7 @@ export default function AtivosPage() {
             <strong
               className={`mt-4 block text-xl ${
                 summary.result >= 0
-                  ? 'text-[#0b6b57]'
+                  ? 'text-[#1D4ED8]'
                   : 'text-red-600'
               }`}
             >
@@ -764,7 +764,7 @@ export default function AtivosPage() {
                 <button
                   type="submit"
                   disabled={isSaving}
-                  className="rounded-xl bg-[#0b6b57] px-5 py-3 text-sm font-bold text-white hover:bg-[#074d40] disabled:opacity-60"
+                  className="rounded-xl bg-[#1D4ED8] px-5 py-3 text-sm font-bold text-white hover:bg-[#1E40AF] disabled:opacity-60"
                 >
                   {isSaving
                     ? 'Salvando...'

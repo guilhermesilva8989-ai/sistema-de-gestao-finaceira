@@ -390,7 +390,7 @@ export default function MovimentacoesPage() {
             disabled={
               assets.length === 0
             }
-            className="rounded-xl bg-[#0b6b57] px-5 py-3 text-sm font-bold text-white hover:bg-[#074d40] disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-xl bg-[#1D4ED8] px-5 py-3 text-sm font-bold text-white hover:bg-[#1E40AF] disabled:cursor-not-allowed disabled:opacity-50"
           >
             + Nova movimentação
           </button>
@@ -430,7 +430,7 @@ export default function MovimentacoesPage() {
               Vendas
             </span>
 
-            <strong className="mt-4 block text-xl text-[#0b6b57]">
+            <strong className="mt-4 block text-xl text-[#1D4ED8]">
               {currency(
                 totals.sales,
               )}
@@ -528,7 +528,7 @@ export default function MovimentacoesPage() {
                               className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${
                                 movement.type ===
                                 'BUY'
-                                  ? 'bg-[#e7f6f1] text-[#0b6b57]'
+                                  ? 'bg-[#DBEAFE] text-[#1D4ED8]'
                                   : 'bg-red-50 text-red-600'
                               }`}
                             >
@@ -813,7 +813,7 @@ export default function MovimentacoesPage() {
                     isSaving ||
                     !assetId
                   }
-                  className="rounded-xl bg-[#0b6b57] px-5 py-3 text-sm font-bold text-white hover:bg-[#074d40] disabled:opacity-60"
+                  className="rounded-xl bg-[#1D4ED8] px-5 py-3 text-sm font-bold text-white hover:bg-[#1E40AF] disabled:opacity-60"
                 >
                   {isSaving
                     ? 'Salvando...'

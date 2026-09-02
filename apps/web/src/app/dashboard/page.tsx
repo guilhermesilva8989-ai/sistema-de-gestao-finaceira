@@ -277,7 +277,7 @@ export default function DashboardPage() {
                   Valor atual
                 </span>
 
-                <strong className="mt-3 block text-2xl text-[#0b6b57]">
+                <strong className="mt-3 block text-2xl text-[#1D4ED8]">
                   {currency(
                     values.current,
                   )}
@@ -289,7 +289,7 @@ export default function DashboardPage() {
                   Resultado
                 </span>
 
-                <strong className="mt-3 block text-2xl text-[#0b6b57]">
+                <strong className="mt-3 block text-2xl text-[#1D4ED8]">
                   {currency(
                     values.result,
                   )}
@@ -301,7 +301,7 @@ export default function DashboardPage() {
                   Rentabilidade
                 </span>
 
-                <strong className="mt-3 block text-2xl text-[#0b6b57]">
+                <strong className="mt-3 block text-2xl text-[#1D4ED8]">
                   {values.profitability.toFixed(
                     2,
                   )}

@@ -55,7 +55,8 @@ export const ModelName = {
   Profile: 'Profile',
   Portfolio: 'Portfolio',
   Asset: 'Asset',
-  Movement: 'Movement'
+  Movement: 'Movement',
+  Goal: 'Goal'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -141,6 +142,21 @@ export const MovementScalarFieldEnum = {
 } as const
 
 export type MovementScalarFieldEnum = (typeof MovementScalarFieldEnum)[keyof typeof MovementScalarFieldEnum]
+
+
+export const GoalScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  name: 'name',
+  description: 'description',
+  targetAmount: 'targetAmount',
+  currentAmount: 'currentAmount',
+  targetDate: 'targetDate',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type GoalScalarFieldEnum = (typeof GoalScalarFieldEnum)[keyof typeof GoalScalarFieldEnum]
 
 
 export const SortOrder = {

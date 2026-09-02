@@ -81,7 +81,7 @@ export default function LoginPage() {
             F
           </div>
 
-          <span>Finora</span>
+          <span>Financeira Rakisan</span>
         </div>
 
         <div className="showcase-content">
@@ -149,7 +149,7 @@ export default function LoginPage() {
               F
             </div>
 
-            <span>Finora</span>
+            <span>Financeira Rakisan</span>
           </div>
 
           <span className="eyebrow dark">

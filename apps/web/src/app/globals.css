@@ -8,9 +8,9 @@
   --muted: #667085;
   --border: #e4e7ec;
 
-  --brand: #0b6b57;
-  --brand-dark: #074d40;
-  --brand-light: #dff4ee;
+  --brand: #1D4ED8;
+  --brand-dark: #1E40AF;
+  --brand-light: #DBEAFE;
 
   --danger: #b42318;
   --danger-background: #fef3f2;
@@ -773,7 +773,7 @@ a {
   background:
     linear-gradient(
       145deg,
-      #0b6b57,
+      #1D4ED8,
       #084b3f
     );
 }

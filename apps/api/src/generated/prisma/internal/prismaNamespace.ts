@@ -401,7 +401,8 @@ export const ModelName = {
   Profile: 'Profile',
   Portfolio: 'Portfolio',
   Asset: 'Asset',
-  Movement: 'Movement'
+  Movement: 'Movement',
+  Goal: 'Goal'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -417,7 +418,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "user" | "profile" | "portfolio" | "asset" | "movement"
+    modelProps: "user" | "profile" | "portfolio" | "asset" | "movement" | "goal"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -791,6 +792,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    Goal: {
+      payload: Prisma.$GoalPayload<ExtArgs>
+      fields: Prisma.GoalFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.GoalFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.GoalFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>
+        }
+        findFirst: {
+          args: Prisma.GoalFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.GoalFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>
+        }
+        findMany: {
+          args: Prisma.GoalFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>[]
+        }
+        create: {
+          args: Prisma.GoalCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>
+        }
+        createMany: {
+          args: Prisma.GoalCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.GoalCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>[]
+        }
+        delete: {
+          args: Prisma.GoalDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>
+        }
+        update: {
+          args: Prisma.GoalUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>
+        }
+        deleteMany: {
+          args: Prisma.GoalDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.GoalUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.GoalUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>[]
+        }
+        upsert: {
+          args: Prisma.GoalUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$GoalPayload>
+        }
+        aggregate: {
+          args: Prisma.GoalAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateGoal>
+        }
+        groupBy: {
+          args: Prisma.GoalGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.GoalGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.GoalCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.GoalCountAggregateOutputType> | number
+        }
+      }
+    }
   }
 } & {
   other: {
@@ -897,6 +972,21 @@ export const MovementScalarFieldEnum = {
 } as const
 
 export type MovementScalarFieldEnum = (typeof MovementScalarFieldEnum)[keyof typeof MovementScalarFieldEnum]
+
+
+export const GoalScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  name: 'name',
+  description: 'description',
+  targetAmount: 'targetAmount',
+  currentAmount: 'currentAmount',
+  targetDate: 'targetDate',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type GoalScalarFieldEnum = (typeof GoalScalarFieldEnum)[keyof typeof GoalScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -1189,6 +1279,7 @@ export type GlobalOmitConfig = {
   portfolio?: Prisma.PortfolioOmit
   asset?: Prisma.AssetOmit
   movement?: Prisma.MovementOmit
+  goal?: Prisma.GoalOmit
 }
 
 /* Types for Logging */
