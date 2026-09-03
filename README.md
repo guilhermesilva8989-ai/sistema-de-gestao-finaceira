@@ -906,7 +906,7 @@ Diferentemente de um projeto puramente visual, a aplicação possui persistênci
 ✅ Build do frontend
 
 ✅ Screenshots
-🔄 Deploy
+✅ Deploy
 ```
 
 ---
@@ -938,6 +938,10 @@ Este software foi desenvolvido para fins educacionais e de demonstração técni
 A **Financeira Rakisan não é uma instituição financeira** e os cálculos apresentados pela aplicação não constituem recomendação ou garantia de investimento.
 
 ---
+
+## 🌐 Projeto online
+
+🚀 **Financeira Rakisan:** [Acessar aplicação](https://sistema-de-gestao-finaceira-web.vercel.app)
 
 ## 📸 Screenshots
 
