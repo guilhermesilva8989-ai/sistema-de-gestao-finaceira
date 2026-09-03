@@ -811,7 +811,7 @@ Possíveis evoluções futuras:
 - [ ] Testes de integração
 - [ ] Testes end-to-end
 - [ ] Documentação da API com Swagger/OpenAPI
-- [ ] Deploy completo em produção
+- [x] Deploy completo em produção
 
 ---
 
